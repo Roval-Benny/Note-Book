@@ -1,0 +1,5 @@
+<mat-card class="mat-card"
+[routerLink]="['/dashboard', {outlets: {'noteEditOutlet': ['note', note.id,'edit']}}]">
+    <mat-card-title>{{note.title}}</mat-card-title>
+    <mat-card-content>{{note.text}}</mat-card-content>
+</mat-card>

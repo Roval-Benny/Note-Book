@@ -1,0 +1,6 @@
+.keep-c-note-container{
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

@@ -1,5 +1,11 @@
 <div class="keep-c-note-container">
   
 	<!-- Include the notes collection with each note rendered as a separate NoteComponent -->
-
+	<mat-list *ngFor="let note of notes">
+		<mat-list-item>
+			    <router-outlet name="noteEditOutlet">
+						<app-note [note]="note"></app-note>
+				</router-outlet>
+		</mat-list-item>
+	</mat-list>
 </div>
