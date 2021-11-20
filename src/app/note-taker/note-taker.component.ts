@@ -11,6 +11,7 @@ export class NoteTakerComponent {
 
   errMessage:string;
   note:Note = new Note();
+  notes:Array<Note> = [];
   constructor(private ns:NotesService) {}
 
   onDone(){
@@ -18,6 +19,7 @@ export class NoteTakerComponent {
       this.ns.addNote(this.note).subscribe(
         (data)=>{
           console.log(data);
+          this.notes.push(data);
           this.note = new Note();
         },
         (err)=>{

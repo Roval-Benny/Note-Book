@@ -20,7 +20,11 @@ export class NotesService {
       'Authorization': "Bearer "+this.token
     }}).subscribe(notes => {
       this.notes = notes;
-      this.notesSubject.next(this.notes);});
+      this.notesSubject.next(this.notes);}
+      ,error => {
+        console.log(error);
+      }
+      );
   }
 
   getNotes(): BehaviorSubject<Array<Note>> {
@@ -36,8 +40,6 @@ export class NotesService {
   }
 
   addNote(note: Note): Observable<Note> {
-      this.notes.push(note);
-      this.notesSubject.next(this.notes);
       return this.httpClient.post<Note>('http://localhost:3000/api/v1/notes', note,{headers:{
         'Authorization': "Bearer "+this.token
       }});
