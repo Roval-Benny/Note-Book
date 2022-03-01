@@ -1,4 +1,3 @@
-# Angular Assignment - Keep	Level 3
 
 ## Objective 
 
