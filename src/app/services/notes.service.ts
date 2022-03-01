@@ -11,6 +11,7 @@ export class NotesService {
   notesSubject: BehaviorSubject<Array<Note>>;
   private token: string;
   constructor(private httpClient: HttpClient,private auth:AuthenticationService){
+      this.notes = [];
       this.token = this.auth.getBearerToken();
       this.notesSubject = new BehaviorSubject(this.notes);
   }

@@ -41,7 +41,7 @@ const routes:Routes =[
     {path: 'note/:noteId/edit', component: EditNoteOpenerComponent, outlet: 'noteEditOutlet'}
   ] },
   {path:'',redirectTo:'/dashboard/view/listview',pathMatch:'full'},
-]
+] 
 @NgModule({
   declarations: [ AppComponent,
     HeaderComponent,
